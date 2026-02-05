@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio Book</title>
+  <link rel="stylesheet" href="bookstyles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      
+    </div>
+
+    <div class="controls">
+      
+      <button id="prevBtn" class="btn" aria-label="Vorherige Seite">←</button>
+      <div class="counter" aria-live="polite">
+        <span id="spreadLabel">Kapitel 1 · Seite 1/2</span>
+      </div>
+      <button id="nextBtn" class="btn" aria-label="Nächste Seite">→</button>
+    </div>
+    <button id="menuBtn" class="btn" aria-label="Menü öffnen" aria-expanded="false">Menü</button>
+    <div id="menuPopover" class="menu-popover" hidden>
+  <a class="menu-item" href="index.html">Zum Durchlaufen</a>
+</div>
+
+  </header>
+
+  <main class="stage">
+    <div class="book-wrap">
+      
+      <nav class="bookmarks" aria-label="Kapitel">
+        <ul id="bookmarkList"></ul>
+      </nav>
+
+      
+      <section class="book" aria-label="3D Buch">
+        <div class="book-shell">
+          <div class="spine"></div>
+      
+
+          <div class="viewport">
+           
+          <div class="base-spread">
+            <article class="paper left" id="basePaperLeft">
+             <div id="baseLeft" class="page-content"></div>
+              </article>
+              <article class="paper right" id="basePaperRight">
+              <div id="baseRight" class="page-content"></div>
+  </article>
+</div>
+
+
+           
+            <div id="flips" class="flips" aria-hidden="true"></div>
+          </div>
+
+          <div class="cover"></div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    
+    <span class="muted">Pfeiltasten ← / → zum Blättern</span>
+  </footer>
+
+
+
+  <script src="bookapp.js"></script>
+</body>
+</html>

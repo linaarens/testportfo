@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>3D Museum – 8 Räume</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <canvas id="gl"></canvas>
+  
+<div id="menuWrap" aria-label="Navigation">
+  <button id="menuBtn" class="menuBtn" type="button" aria-haspopup="true" aria-expanded="false">Menü</button>
+
+  <div id="menuPanel" class="menuPanel hidden" role="menu">
+    
+    <button id="menuBrowse" class="menuItem" type="button" role="menuitem" onclick="window.location.href='bookstart.html'">Zum Durchblättern</button>
+    <div class="menuSep" aria-hidden="true"></div>
+    <div id="menuRooms" class="menuRooms" role="none"></div>
+  </div>
+</div>
+
+
+  <div id="hud">
+    <div id="crosshair" aria-hidden="true"></div>
+    <div id="tooltip" class="hidden"></div>
+  </div>
+
+  <div id="overlay">
+    <div class="panel">
+      <div class="title">Willkommen auf Linas Spielwiese!</div>
+      <div class="subtitle">Ein interaktives Museum</div>
+      
+      <div class="hr"></div>
+      <div class="controls">
+        <div><span class="k">W A S D</span> laufen</div>
+        <div><span class="k">Mouse</span> umsehen</div>
+        <div><span class="k">Shift</span> sprint</div>
+        <div><span class="k">E</span> interagieren (wenn Tooltip erscheint)</div>
+        <div><span class="k">Esc</span> Maus freigeben</div>
+        <div><span class="k">M</span> Menü öffnen</div>
+      </div>
+      
+      <div class="hr"></div>
+      <div class="subtitle">Bereit? Klicke zum Starten.</div>
+      <p></p>
+      <div id="loading">
+        <div class="bar"><div class="fill" id="loadFill"></div></div>
+        <div class="small" id="loadText">Lade Assets…</div>
+  </div>
+  </div>
+  </div>
+
+  <div id="modal" class="hidden" role="dialog" aria-modal="true" aria-label="Projekt">
+    <div class="modalCard">
+      <button id="modalClose" class="close" title="Schließen">×</button>
+      <div class="modalBody">
+        <div class="modalImgWrap">
+          <img id="modalImg" alt="" />
+        </div>
+        <div class="modalText">
+          <div id="modalTitle" class="modalTitle"></div>
+          <div id="modalRoom" class="modalRoom"></div>
+          <div id="modalDesc" class="modalDesc"></div>
+          <div class="modalMeta">
+            <a id="modalLink" href="#" target="_blank" rel="noopener" class="hidden">Projekt ansehen</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <noscript>Bitte JavaScript aktivieren.</noscript>
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>
